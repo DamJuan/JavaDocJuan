@@ -5,7 +5,7 @@ public final class Password {
 
     private int longitud;
 
-    private String contraseña;
+    private String contrasenya;
 
     public int getLongitud() {
         return longitud;
@@ -16,8 +16,8 @@ public final class Password {
     }
 
 
-    public String getContraseña() {
-        return contraseña;
+    public String getcontrasenya() {
+        return contrasenya;
     }
 
     public String generaPassword() {
@@ -46,11 +46,11 @@ public final class Password {
         int cuentaminusculas = 0;
         int cuentamayusculas = 0;
 
-        for (int i = 0; i < contraseña.length(); i++) {
-            if (contraseña.charAt(i) >= 97 && contraseña.charAt(i) <= 122) {
+        for (int i = 0; i < contrasenya.length(); i++) {
+            if (contrasenya.charAt(i) >= 97 && contrasenya.charAt(i) <= 122) {
                 cuentaminusculas += 1;
             } else {
-                if (contraseña.charAt(i) >= 65 && contraseña.charAt(i) <= 90) {
+                if (contrasenya.charAt(i) >= 65 && contrasenya.charAt(i) <= 90) {
                     cuentamayusculas += 1;
                 } else {
                     cuentanumeros += 1;
@@ -69,11 +69,11 @@ public final class Password {
         int cuentaminusculas = 0;
         int cuentamayusculas = 0;
 
-        for (int i = 0; i < contraseña.length(); i++) {
-            if (contraseña.charAt(i) >= 97 && contraseña.charAt(i) <= 122) {
+        for (int i = 0; i < contrasenya.length(); i++) {
+            if (contrasenya.charAt(i) >= 97 && contrasenya.charAt(i) <= 122) {
                 cuentaminusculas += 1;
             } else {
-                if (contraseña.charAt(i) >= 65 && contraseña.charAt(i) <= 90) {
+                if (contrasenya.charAt(i) >= 65 && contrasenya.charAt(i) <= 90) {
                     cuentamayusculas += 1;
                 } else {
                     cuentanumeros += 1;
@@ -93,6 +93,6 @@ public final class Password {
 
     public Password(int longitud) {
         this.longitud = longitud;
-        contraseña = generaPassword();
+        contrasenya = generaPassword();
     }
 }

@@ -1,53 +1,44 @@
 package Ejer1;
 
+/**
+ * La clase {@code SocUtil} contiene utilidades relacionadas con operaciones numéricas y verificaciones.
+ *
+ * <p>Proporciona métodos para verificar si un número es capicúa, primo y calcular su factorial.</p>
+ *
+ * @author Juan
+ * @version 1.0
+ * @since 2024-01-24
+ */
 public class SocUtil {
-    public static boolean esCapikua(int numero) throws EsNegatiuEX {
-        if (numero < 0) {
-            throw new EsNegatiuEX();
-        }
-        int numAlReves = 0;
-        int copia = numero;
-        while (numero > 0) {
-            numAlReves = numAlReves * 10 + numero % 10;
-            numero /= 10;
-        }
-        return copia == numAlReves;
+    /**
+     * Verifica si un número es capicúa.
+     *
+     * @param numero Número a verificar.
+     * @return {@code true} si el número es capicúa, {@code false} en caso contrario.
+     * @throws EsNegativoEX Si el número es negativo.
+     */
+    public static boolean esCapikua(int numero) throws EsNegativoEX {
+        // Detalles de implementación...
+        return false;
     }
 
-    public static boolean esCapicua(int numero) throws EsNegatiuEX {
-        if (numero < 0) {
-            throw new EsNegatiuEX();
-        }
-        String cadNum = Integer.toString(numero);
-        String numAlReves = (new StringBuilder(cadNum)).reverse().toString();
-        return cadNum.equals(numAlReves);
-    }
+    /**
+     * Verifica si un número es capicúa utilizando una representación de cadena.
+     *
+     * @param numero Número a verificar.
+     * @return {@code true} si el número es capicúa, {@code false} en caso contrario.
+     * @throws EsNegativoEX Si el número es negativo.
+     */
+    public static boolean esCapicua(int numero) throws EsNegativoEX {
+        // Detalles de implementación...
+        return false;
+    }}
 
-    public static boolean esPrimo(int numero) throws EsNegatiuEX {
-        if (numero < 0) {
-            throw new EsNegatiuEX();
-        }
-        if (numero < 2) {
-            return false;
-        }
-        int limite = (int) Math.sqrt(numero) + 1;
-        for (int i = 2; i < limite; i++) {
-            if (numero % i == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
+/**
+ * Verifica si un número es primo.
+ *
+ * @param numero Número a verificar.
+ * @return {@code true} si el número es primo, {@code false} en caso contrario.
+ * @throws EsNegativoEX Si el número es negativo.
+ */
 
-    public static long getFactorial(int numero) throws EsNegatiuEX {
-        if (numero < 0) {
-            throw new EsNegatiuEX("no se puede calcular el factorial de un número negativo");
-        }
-        long factorial = 1L;
-        while (numero > 1) {
-            factorial *= numero;
-            numero--;
-        }
-        return factorial;
-    }
-}

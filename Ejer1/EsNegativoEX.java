@@ -6,7 +6,7 @@ package Ejer1;
  *
  * <p>Puede construirse con un mensaje de error predeterminado o personalizado.</p>
  *
- * @author Tu Nombre
+ * @author Juan
  * @version 1.0
  * @since 2024-01-24
  */
